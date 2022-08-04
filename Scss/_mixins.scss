@@ -1,0 +1,12 @@
+@mixin content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin border($borderColor, $borderWidth: 5px) {
+  border: $borderWidth solid $borderColor;
+}
+@mixin animation($duration: 0.4s) {
+  transition: all $duration ease;
+}

@@ -1,0 +1,74 @@
+//This is main file for scss
+@import "critical.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  color: $titleColor;
+  text-decoration: underline;
+}
+body {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  font-family: sans-serif;
+  background: $backgroundColor;
+}
+i,
+svg {
+  pointer-events: none;
+}
+
+.sequencer {
+  padding: 1rem;
+  > * {
+    cursor: pointer;
+  }
+}
+.controls button {
+  padding: 0.5rem;
+  color: $buttonColor;
+  border-radius: 2rem;
+  @include animation;
+  @include border(rgb(45, 20, 20), 1px);
+}
+.controls button:hover {
+  color: rgb(45, 20, 20);
+  background-color: $buttonColor;
+}
+
+#kick-select,
+#clap-select,
+#hihat-select {
+  border-radius: 0.5rem;
+}
+
+.play {
+  padding: 0.5rem 2rem;
+  color: $playButtonColor;
+  background-color: rgb(181, 126, 205);
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem;
+  width: 50%;
+  &:hover {
+    background: $playButtonColor;
+    color: antiquewhite;
+  }
+  @include animation;
+  &.active {
+    background: $playButtonColor;
+    color: antiquewhite;
+  }
+}
+
+.play-button {
+  @include content-center;
+}

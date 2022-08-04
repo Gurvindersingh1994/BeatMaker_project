@@ -1,0 +1,120 @@
+.kick-pad,
+.clap-pad,
+.hihat-pad {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: all 0.4s ease;
+}
+.kick-pad:hover,
+.clap-pad:hover,
+.hihat-pad:hover {
+  opacity: 0.3;
+}
+
+.kick,
+.clap,
+.hihat {
+  display: flex;
+  justify-content: space-between;
+}
+
+.kick-pad {
+  background: #3fb9b1;
+}
+
+.kick-pad.active,
+.clap-pad.active,
+.hihat-pad.active {
+  background: rgb(42, 98, 88);
+}
+
+.clap-pad {
+  background: #3f41b9;
+}
+
+.hihat-pad {
+  background: #ab3883;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  color: rgb(46, 31, 131);
+  text-decoration: underline;
+}
+
+body {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  font-family: sans-serif;
+  background: #fffdd0;
+}
+
+i,
+svg {
+  pointer-events: none;
+}
+
+.sequencer {
+  padding: 1rem;
+}
+.sequencer > * {
+  cursor: pointer;
+}
+
+.controls button {
+  padding: 0.5rem;
+  color: #b12a59;
+  border-radius: 2rem;
+  transition: all 0.4s ease;
+  border: 1px solid rgb(45, 20, 20);
+}
+
+.controls button:hover {
+  color: rgb(45, 20, 20);
+  background-color: #b12a59;
+}
+
+#kick-select,
+#clap-select,
+#hihat-select {
+  border-radius: 0.5rem;
+}
+
+.play {
+  padding: 0.5rem 2rem;
+  color: #1f1412;
+  background-color: rgb(181, 126, 205);
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem;
+  width: 50%;
+  transition: all 0.4s ease;
+}
+.play:hover {
+  background: #1f1412;
+  color: antiquewhite;
+}
+.play.active {
+  background: #1f1412;
+  color: antiquewhite;
+}
+
+.play-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */

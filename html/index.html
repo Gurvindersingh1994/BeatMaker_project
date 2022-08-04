@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beat Maker</title>
+    <link rel="stylesheet" href="/Scss/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Beat Maker Project</h1>
+    </header>
+    <div class="app-body sequencer">
+      <!-- KICK -->
+      <div class="kick-body">
+        <h2>Kick</h2>
+        <div class="controls">
+          <button data-track="0" class="mute kick-volume">
+            <i class="fa-solid fa-volume-xmark"></i>
+          </button>
+          <select name="kick-select" id="kick-select">
+            <option value="/sounds/kick-classic.wav">Classic Kick</option>
+            <option value="/sounds/kick-acoustic01.wav">
+              kick acoustic-01
+            </option>
+            <option value="/sounds/kick-acoustic02.wav">
+              Classic acoustic-02
+            </option>
+          </select>
+        </div>
+        <div class="kick">
+          <div class="pad kick-pad k0"></div>
+          <div class="pad kick-pad k1"></div>
+          <div class="pad kick-pad k2"></div>
+          <div class="pad kick-pad k3"></div>
+          <div class="pad kick-pad k4"></div>
+          <div class="pad kick-pad k5"></div>
+          <div class="pad kick-pad k6"></div>
+          <div class="pad kick-pad k7"></div>
+        </div>
+      </div>
+      <!-- CLAP -->
+      <div class="clap-body">
+        <h2>Clap</h2>
+        <div class="controls">
+          <button data-track="0" class="mute clap-volume">
+            <i class="fa-solid fa-volume-xmark"></i>
+          </button>
+          <select name="clap-select" id="clap-select">
+            <option value="/sounds/clap-808.wav">Clap 808</option>
+            <option value="/sounds/clap-analog.wav">Clap Analog</option>
+            <option value="/sounds/clap-crushed.wav">Clap Crushed</option>
+          </select>
+        </div>
+        <div class="clap">
+          <div class="pad clap-pad c0"></div>
+          <div class="pad clap-pad c1"></div>
+          <div class="pad clap-pad c2"></div>
+          <div class="pad clap-pad c3"></div>
+          <div class="pad clap-pad c4"></div>
+          <div class="pad clap-pad c5"></div>
+          <div class="pad clap-pad c6"></div>
+          <div class="pad clap-pad c7"></div>
+        </div>
+      </div>
+      <!-- HIHAT -->
+      <div class="hihat-body">
+        <h2>Hihat</h2>
+        <div class="controls">
+          <button data-track="0" class="mute hihat-volume">
+            <i class="fa-solid fa-volume-xmark"></i>
+          </button>
+          <select name="hihat-select" id="hihat-select">
+            <option value="/sounds/hihat-808.wav">Hihat 808</option>
+            <option value="/sounds/hihat-acoustic01.wav">
+              Hihat acoustic-01
+            </option>
+            <option value="/sounds/hihat-acoustic02.wav">
+              Hihat acoustic-02
+            </option>
+          </select>
+        </div>
+        <div class="hihat">
+          <div class="pad hihat-pad h0"></div>
+          <div class="pad hihat-pad h1"></div>
+          <div class="pad hihat-pad h2"></div>
+          <div class="pad hihat-pad h3"></div>
+          <div class="pad hihat-pad h4"></div>
+          <div class="pad hihat-pad h5"></div>
+          <div class="pad hihat-pad h6"></div>
+          <div class="pad hihat-pad h7"></div>
+        </div>
+      </div>
+      <div class="play-button">
+
+        <button class="play">Play</button>
+      </div>
+      <audio class="kick-sound" src="/sounds/kick-classic.wav"></audio>
+      <audio class="clap-sound" src="/sounds/clap-808.wav"></audio>
+      <audio class="hihat-sound" src="/sounds/hihat-808.wav"></audio>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"
+      integrity="sha512-8pHNiqTlsrRjVD4A/3va++W1sMbUHwWxxRPWNyVlql3T+Hgfd81Qc6FC5WMXDC+tSauxxzp1tgiAvSKFu1qIlA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module" src="/js/app.js"></script>
+    <footer>Footer</footer>
+  </body>
+</html>

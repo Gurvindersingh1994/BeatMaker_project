@@ -1,0 +1,35 @@
+.kick-pad,
+.clap-pad,
+.hihat-pad {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: all 0.4s ease;
+  &:hover {
+    opacity: 0.3;
+  }
+}
+
+.kick,
+.clap,
+.hihat {
+  display: flex;
+  justify-content: space-between;
+}
+.kick-pad {
+  background: $kickColor;
+}
+.kick-pad.active,
+.clap-pad.active,
+.hihat-pad.active {
+  background: rgb(42, 98, 88);
+}
+.clap-pad {
+  background: $clapColor;
+}
+
+.hihat-pad {
+  background: $hihatColor;
+}
