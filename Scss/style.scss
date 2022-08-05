@@ -58,12 +58,8 @@ svg {
   border: none;
   border-radius: 0.5rem;
   width: 50%;
-  &:hover {
-    background: $playButtonColor;
-    color: antiquewhite;
-  }
-  @include animation;
-  &.active {
+  transition: 0.5sec ease;
+  &.button-active {
     background: $playButtonColor;
     color: antiquewhite;
   }

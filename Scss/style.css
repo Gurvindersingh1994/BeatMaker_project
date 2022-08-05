@@ -6,12 +6,17 @@
   margin: 1rem;
   cursor: pointer;
   border-radius: 0.5rem;
-  transition: all 0.4s ease;
+  transition: all 0.2s ease;
 }
 .kick-pad:hover,
 .clap-pad:hover,
 .hihat-pad:hover {
   opacity: 0.3;
+}
+.kick-pad.active,
+.clap-pad.active,
+.hihat-pad.active {
+  background: rgb(42, 98, 88);
 }
 
 .kick,
@@ -25,12 +30,6 @@
   background: #3fb9b1;
 }
 
-.kick-pad.active,
-.clap-pad.active,
-.hihat-pad.active {
-  background: rgb(42, 98, 88);
-}
-
 .clap-pad {
   background: #3f41b9;
 }
@@ -39,6 +38,23 @@
   background: #ab3883;
 }
 
+@-webkit-keyframes playTracks {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes playTracks {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -102,13 +118,9 @@ svg {
   border: none;
   border-radius: 0.5rem;
   width: 50%;
-  transition: all 0.4s ease;
+  transition: 0.5sec ease;
 }
-.play:hover {
-  background: #1f1412;
-  color: antiquewhite;
-}
-.play.active {
+.play.button-active {
   background: #1f1412;
   color: antiquewhite;
 }
