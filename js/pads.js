@@ -5,19 +5,36 @@ export default class DrumKit {
     this.clapSound = document.querySelector(".clap-sound");
     this.hihatSound = document.querySelector(".hihat-sound");
     this.playButton = document.querySelector(".play");
+    this.selectValue = document.querySelectorAll("select");
+    this.muteButton = document.querySelectorAll(".mute");
     this.index = 0;
     this.bpm = 100;
     this.soundPlaying = null;
   }
 
+  selectAudio(e) {
+    const soundName = e.target.name;
+    const soundPath = e.target.value;
+    switch (soundName) {
+      case "kick-select":
+        this.kickSound.src = soundPath;
+        break;
+      case "clap-select":
+        this.clapSound.src = soundPath;
+        break;
+      case "hihat-select":
+        this.hihatSound.src = soundPath;
+        break;
+    }
+  }
   //selecting active pad on
   buttonMode() {
-    if (!this.soundPlaying) {
-      this.playButton.innerHTML = "Play-On";
+    if (this.soundPlaying) {
+      this.playButton.innerHTML = "Play";
     } else {
-      this.playButton.innerHTML = "Play-Off";
+      this.playButton.innerHTML = "Stop";
+      this.playButton.classList.toggle("button-active");
     }
-    this.playButton.classList.toggle("button-active");
   }
 
   activePad() {
@@ -67,6 +84,36 @@ export default class DrumKit {
     } else {
       clearInterval(this.soundPlaying);
       this.soundPlaying = null; // to reset the default value
+    }
+  }
+
+  muteSound(e) {
+    const muteValue = e.target.getAttribute("data-track");
+
+    if (e.target.classList.contains("active")) {
+      switch (muteValue) {
+        case "0":
+          this.kickSound.volume = 0;
+          break;
+        case "1":
+          this.clapSound.volume = 0;
+          break;
+        case "2":
+          this.hihatSound.volume = 0;
+          break;
+      }
+    } else {
+      switch (muteValue) {
+        case "0":
+          this.kickSound.volume = 1;
+          break;
+        case "1":
+          this.clapSound.volume = 1;
+          break;
+        case "2":
+          this.hihatSound.volume = 1;
+          break;
+      }
     }
   }
 }
