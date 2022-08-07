@@ -1,11 +1,10 @@
 // This is the main js file
 
-//imports
+//default imports
 import DrumKit from "./pads.js";
 
 //Objects
 const drumkit = new DrumKit();
-
 //EventListeners
 
 //activate sounds
