@@ -61,22 +61,31 @@
   box-sizing: border-box;
 }
 
-h1 {
-  margin-top: 3rem;
+.header,
+.footer {
+  background-color: #224a93;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+.header h1,
+.footer h1 {
+  margin: 2rem;
   text-transform: uppercase;
-  color: rgb(46, 31, 131);
+  color: rgb(33, 206, 165);
   text-decoration: underline;
 }
 
 body {
+  background: #fffdd0;
+}
+
+.sequencer {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
   font-family: sans-serif;
-  background: #fffdd0;
 }
 
 i,
@@ -91,15 +100,16 @@ svg {
   cursor: pointer;
 }
 
-.controls button {
+.controls .mute {
   padding: 0.5rem;
   color: #b12a59;
   border-radius: 2rem;
+  cursor: pointer;
   transition: all 0.4s ease;
   border: 1px solid rgb(45, 20, 20);
 }
 
-.controls button:hover {
+.controls .mute.active {
   color: rgb(45, 20, 20);
   background-color: #b12a59;
 }
